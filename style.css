@@ -1,0 +1,20 @@
+.images{
+    display: flex;
+    transition: transform 0.5s;
+}
+.window{
+    width: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.blue{
+    color: blue;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.buttons > span{
+    margin: 0 10px;
+} 
