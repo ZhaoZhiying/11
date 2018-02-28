@@ -1,11 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .images{
     display: flex;
     transition: transform 0.5s;
 }
-.window{
+.window{ 
     width: 300px;
     overflow: hidden;
     margin: 0 auto;
+}
+.control{
+    border: 1px blue transparent;
+    text-align: center;
+}
+.control .previous{
+    border: 1px blue solid;
+}
+.control .next{
+    border: 1px blue solid;
 }
 .blue{
     color: blue;
