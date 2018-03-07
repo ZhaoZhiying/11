@@ -1,5 +1,5 @@
-var allButtons = $('#buttons > button')
-      
+let allButtons = $('#buttons > button')
+     
 //给所有按钮一个监听事件
 for(let i=0; i<allButtons.length; i++){
     $(allButtons[i]).on('click',function(x){
@@ -21,33 +21,13 @@ playSlide(n % size)
 var timerId = setTimer()
 
 //鼠标移进时，闹钟停掉
-$('#window').on('mouseenter', function(){
-    window.clearInterval(timerId)
-})
-$('#control > button').on('mouseenter', function(){
-    window.clearInterval(timerId)
-})
-$('#buttons > button').on('mouseenter', function(){
+$('#window,#control > button,#buttons > button').on('mouseenter', function(){
     window.clearInterval(timerId)
 })
 
 //鼠标移出时，闹钟继续
-$('#window').on('mouseleave', function(){
+$('#window,#control > button,#buttons > button').on('mouseleave', function(){
     timerId = setTimer()
-})
-$('#control > button').on('mouseleave', function(){
-    timerId = setTimer()
-})
-$('#buttons > button').on('mouseleave', function(){
-    timerId = setTimer()
-})
-
-//control 
-$(next).on('click', function(){
-    goToSlide(current+1)
-})
-  $(previous).on('click', function(){
-    goToSlide(current-1)
 })
 
 //定时
